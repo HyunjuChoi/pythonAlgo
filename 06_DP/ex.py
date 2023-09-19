@@ -1,10 +1,14 @@
 #230731
-# 피보나치 함수 재귀로 구현해보기
+# 피보나치 함수 반복문으로 구현해보기 
+# bottom up (상향식) 방식이므로 작은수 -> 큰 수
 
-def fibo(x):
-    if x ==1 or x == 2:
-        return 1
-    else:
-        return fibo(x-1)+fibo(x-2) 
+d = [0]*100
 
-print(fibo(4))
+d[0] = 1
+d[1] = 1
+
+n = 99
+
+for i in range(3, n+1):
+    d[i] = d[i-2] + d[i-1]
+
